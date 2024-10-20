@@ -20,7 +20,7 @@ function HomePage() {
     // };
 
     return (
-        <div className='size-full'>
+        <div className='pb-12 overflow-scroll size-full no-scrollbar'>
             <Search />
             <Banner />
             <Categoties />

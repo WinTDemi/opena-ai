@@ -8,9 +8,9 @@ function Categoties() {
             <p className="p-2 font-bold">Categoties</p>
             <div className="carousel">
                 {
-                    dataCategories.map((categotie: Categotie) => {
+                    dataCategories.map((categotie: Categotie, key) => {
                         return (
-                            <div className="mx-2 rounded-t-full carousel-item bg-base-common-1">
+                            <div className="mx-2 rounded-t-full carousel-item bg-base-common-1" key={key}>
                                 <CategotieCard id={categotie.id} img={categotie.img} name={categotie.name} />
                             </div>
                         );

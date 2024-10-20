@@ -1,24 +1,30 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
-import favoriteProductsReducer from '../presentation/slices/favoriteProductsSlice'; // Ensure this path is correct
+import productsReducer from '../presentation/slices/ProductsSlice'; // Ensure this path is correct
 import { combineReducers } from 'redux';
 
-const favoriteProductsPersistConfig = {
-    key: 'favoriteProducts',
+const ProductsPersistConfig = {
+    key: 'products',
     storage,
 };
 
-const persistedFavoriteProductsReducer = persistReducer(favoriteProductsPersistConfig, favoriteProductsReducer);
+const persistedProductsReducer = persistReducer(ProductsPersistConfig, productsReducer);
 
 // Combine your reducers without persisting the root reducer
 const rootReducer = combineReducers({
-    favoriteProducts: persistedFavoriteProductsReducer,
+    products: persistedProductsReducer,
 });
 
 // Configure the store with the root reducer (no persistence at the root level)
 const store = configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
+            },
+        }),
 });
 
 // Create a persistor only for the slices that are persisted
