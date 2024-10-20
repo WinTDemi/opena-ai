@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import Header from '../components/sections/Header';
-import FarvoritePage from '../pages/FarvoritePage';
 import DetailPage from '../pages/DetailPage';
 import BottomNavigation from '../components/common/BottomNavigation';
 import CartPage from '../pages/CartPage';
 import ProfilePage from '../pages/ProfilePage';
+import FavoritePage from '../pages/FavoritePage';
 
 const AppRoutes = () => {
 
@@ -37,7 +37,7 @@ const AppRoutes = () => {
                             </div>
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
-                                <Route path="/farvorite" element={<FarvoritePage />} />
+                                <Route path="/favorite" element={<FavoritePage />} />
                                 <Route path="/detail" element={<DetailPage />} />
                                 <Route path="/cart" element={<CartPage />} />
                                 <Route path="/profile" element={<ProfilePage />} />

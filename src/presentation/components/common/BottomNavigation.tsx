@@ -124,7 +124,11 @@ function BottomNavigation() {
                     <div key={item.id} className="flex-1 group">
                         <button
                             onClick={() => handleNavigation(item.path)}
-                            className={`flex-col items-center justify-center w-full mx-auto text-center text-gray-400 border-t-2 border-transparent ${isActive(item.path) ? 'text-green-common border-green-common' : 'group-hover:text-green-400 group-hover:border-green-400'
+                            className={`flex-col items-center justify-center w-full mx-auto text-center text-gray-400 border-transparent ${item.label === 'Home'
+                                    ? 'border-t-2 border-green-500' // Thay bằng border-green-500 để kiểm tra
+                                    : isActive(item.path)
+                                        ? 'text-green-500 border-t-2 border-green-500'
+                                        : 'group-hover:text-green-400 group-hover:border-t-2 group-hover:border-green-400'
                                 }`}
                         >
                             <span className="flex items-center justify-center pt-1">
