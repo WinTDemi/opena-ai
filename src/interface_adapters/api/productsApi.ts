@@ -11,7 +11,7 @@ import { Product } from '../../domain/Product';
 const productsApi: Product[] = [
     {
         id: 1,
-        name: 'avocado',
+        name: 'Avocado',
         img: avocadoImg,
         price: 2.99,
         isFavorite: false,
@@ -20,7 +20,7 @@ const productsApi: Product[] = [
     },
     {
         id: 2,
-        name: 'kiwi',
+        name: 'Kiwi',
         img: kiwiImg,
         price: 1.99,
         isFavorite: false,
@@ -29,7 +29,7 @@ const productsApi: Product[] = [
     },
     {
         id: 3,
-        name: 'mango',
+        name: 'Mango',
         img: mangoImg,
         price: 3.99,
         isFavorite: false,
@@ -38,7 +38,7 @@ const productsApi: Product[] = [
     },
     {
         id: 4,
-        name: 'strawberry',
+        name: 'Strawberry',
         img: strawberryImg,
         price: 2.99,
         isFavorite: false,
@@ -47,7 +47,7 @@ const productsApi: Product[] = [
     },
     {
         id: 5,
-        name: 'bananas',
+        name: 'Bananas',
         img: bananasImg,
         price: 1.99,
         isFavorite: false,
@@ -56,7 +56,7 @@ const productsApi: Product[] = [
     },
     {
         id: 6,
-        name: 'lemon',
+        name: 'Lemon',
         img: lemonImg,
         price: 0.99,
         isFavorite: false,
@@ -65,7 +65,7 @@ const productsApi: Product[] = [
     },
     {
         id: 7,
-        name: 'orange',
+        name: 'Orange',
         img: orangeImg,
         price: 1.99,
         isFavorite: false,
@@ -74,7 +74,7 @@ const productsApi: Product[] = [
     },
     {
         id: 8,
-        name: 'watermelon',
+        name: 'Watermelon',
         img: watermelonImg,
         price: 4.99,
         isFavorite: false,

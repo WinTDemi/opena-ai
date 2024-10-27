@@ -27,8 +27,8 @@ const AppRoutes = () => {
 
     return (
         <Router>
-            <div className='flex justify-center'>
-                <div className="mockup-phone">
+            <div className='flex justify-center items-center bg-[#111111] h-screen'>
+                <div className="shadow-2xl mockup-phone shadow-green-common">
                     <div className="camera"></div>
                     <div className="display">
                         <div className="relative pt-24 artboard artboard-demo phone-1">
