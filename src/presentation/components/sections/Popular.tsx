@@ -7,8 +7,6 @@ function Popular() {
 
     const products = useSelector((state: RootState) => state.products || []).value;
 
-    console.log(products);
-
     return (
         <div>
             <p className="p-2 font-bold">Popular</p>
