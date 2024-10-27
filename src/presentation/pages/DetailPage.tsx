@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
 import ProductCard from "../components/common/ProductCard";
+import BottomCartDetail from "../components/common/BottomCartDetail";
 
 function DetailPage() {
 
@@ -27,7 +28,7 @@ function DetailPage() {
     const products = useSelector((state: RootState) => state.products || []).value.filter((product: Product) => product.id !== Number(id));
 
     return (
-        <div className="overflow-scroll pt-44 size-full no-scrollbar">
+        <div className="static overflow-scroll pt-44 size-full no-scrollbar">
             {
                 detail && (
                     <div className="flex flex-col items-center justify-center h-full">
@@ -79,7 +80,7 @@ function DetailPage() {
                                 {detail.description}
                             </p>
                             <p className="py-5 font-bold text-md">Product Details</p>
-                            <div className="grid grid-cols-2 gap-3 pb-12">
+                            <div className="grid grid-cols-2 gap-3 pb-28">
                                 {
                                     products.map((product: Product) => (
                                         <ProductCard key={product.id} product={product} />
@@ -90,6 +91,7 @@ function DetailPage() {
                     </div>
                 )
             }
+            <BottomCartDetail amount={amount} price={detail?.price} />
         </div>
     )
 }
