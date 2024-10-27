@@ -10,6 +10,7 @@ export default {
         'green-common': '#369835',
         'base-common-1': '#f7fbf7',
         'base-common-2': '#e6f4eb',
+        'detail-common-img': '#d0ead6',
       },
     },
   },
